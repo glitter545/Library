@@ -69,3 +69,11 @@ function displayBooks() {
       bookList.appendChild(row);
     });
   }
+
+  newBookButton.addEventListener("click", () => {
+    newBookForm.style.display = "block";
+  });
+  
+  cancelNewBookButton.addEventListener("click", () => {
+    newBookForm.style.display = "none";
+  });
