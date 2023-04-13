@@ -90,3 +90,10 @@ function displayBooks() {
     form.reset();
     newBookForm.style.display = "none";
   });
+
+  // Manually add some books to the library for testing
+ addBookToLibrary(new Book("The Hobbit", "J.R.R. Tolkien", 295, true));
+ addBookToLibrary(new Book("To Kill a Mockingbird", "Harper Lee", 281, true));
+ addBookToLibrary(new Book("1984", "George Orwell", 328, false));
+ addBookToLibrary(new Book("The Great Gatsby", "F. Scott Fitzgerald", 180, true));
+ addBookToLibrary(new Book("Pride and Prejudice", "Jane Austen", 279, false));
