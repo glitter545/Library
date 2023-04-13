@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>My Library</title>
+    <script src="script.js" defer></script>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+      }
+      th {
+        background-color: #ddd;
+      }
+      .read {
+        color: green;
+      }
+      .unread {
+        color: red;
+      }
+      .book-actions {
+        display: flex;
+        gap: 8px;
+      }
+      .book-actions button {
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Library</h1>
+    <button id="new-book">New Book</button>
+    <table id="book-list">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Pages</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div id="new-book-form" style="display: none">
+      <h2>New Book</h2>
+      <form>
+        <div>
+            <label>Title:</label>
+            <input type="text" name="title" required>
+          </div>
+          <div>
+            <label>Author:</label>
+            <input type="text" name="author" required>
+          </div>
+          <div>
+            <label>Pages:</label>
+            <input type="number" name="pages" required>
+          </div>
+          <div>
+            <label>Read:</label>
+            <input type="checkbox" name="read">
+          </div>
+          
+        <div>
+          <button type="submit">Add Book</button>
+          <button type="button" id="cancel-new-book">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+  </body>
+</html>
