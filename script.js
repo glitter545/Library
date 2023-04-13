@@ -77,3 +77,16 @@ function displayBooks() {
   cancelNewBookButton.addEventListener("click", () => {
     newBookForm.style.display = "none";
   });
+
+  submitNewBookButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const form = e.target.closest("form");
+    const title = form.querySelector("input[type='text'][name='title']").value;
+    const author = form.querySelector("input[type='text'][name='author']").value;
+    const pages = form.querySelector("input[type='number'][name='pages']").value;
+    const read = form.querySelector("input[type='checkbox'][name='read']").checked;
+    const book = new Book(title, author, pages, read);
+    addBookToLibrary(book);
+    form.reset();
+    newBookForm.style.display = "none";
+  });
