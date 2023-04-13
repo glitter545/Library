@@ -21,3 +21,9 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
     displayBooks();
   }
+
+function removeBook(e) {
+  const index = e.target.getAttribute("data-index");
+  myLibrary.splice(index, 1);
+  displayBooks();
+}
